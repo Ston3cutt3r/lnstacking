@@ -1,4 +1,4 @@
-# lnstacking
+# lnstacking.com
 lnstacking.com launch pad
 
 metastackdata.com proudly presents the first legally compliant Stacking pool with Lightning payounts
