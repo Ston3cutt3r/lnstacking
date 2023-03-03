@@ -1,6 +1,6 @@
 # lnstacking.com
 
-metastackdata.com proudly presents the first legally compliant Stacking pool with Lightning payounts
+metastackdata.com proudly presents the first legally compliant Stacking pool with Lightning payouts.
 
 For the first time, Stackers will be able to stack STX and earn BTC at zero-commission with the lowest possible BTC tx fees. 
 
