@@ -1,12 +1,105 @@
-# lnstacking.com
+## Installation
 
-metastackdata.com proudly presents the first legally compliant Stacking pool with Lightning payouts.
+```bash
+echo 'Installing Node and Redis';
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg;
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list;
+sudo apt-get update -y;
+sudo apt-get install -y git redis-stack-server;
+sudo systemctl disable redis-stack-server.service;
+exec bash;
+nvm install node;
+```
 
-For the first time, Stackers will be able to stack STX and earn BTC at zero-commission with the lowest possible BTC tx fees. 
+```bash
+echo 'Installing Project Dependencies';
+npm install;
+npm install pm2 -g;
+npm run build;
+```
 
-Furthermore, we will set up a member area on lnstacking.com. An individual user dashboard for transparency throughout the Stacking process.
-Blog posts and animated video clips will ensure that anybody will be able to maintain a Lightning node and stack STX via. lnstacking.com
+```bash
+echo 'Installing CertBot';
+sudo apt install snapd -y;
+sudo snap install core;
+sudo snap refresh core;
+sudo snap install --classic certbot;
+sudo certbot certonly --standalone --domains lnstacking.com;
+sudo cp /etc/letsencrypt/live/lnstacking.com/privkey.pem ./privkey.pem
+sudo cp /etc/letsencrypt/live/lnstacking.com/fullchain.pem ./fullchain.pem
+sudo chmod 777 ./privkey.pem ./fullchain.pem
+```
 
-Users will earn Sats via the Lightning Network by Stacking STX. Transferred directly into their mobile wallet - Stacks will enable Lightning payments in our everyday lives and Lightning payments will make Stacking more cost-effective. Integrating Stacks with Lightning represents an example of a useful combination of Blockchain-Technologies for a better user experience.
+```bash
+echo 'Setting up Port Forwarding';
+sudo iptables -t nat -F;
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3000;
+sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 4000;
+sudo /sbin/iptables-save;
+```
 
-No matter how congested the mempool is - Lightning will enable close to 0% fee payouts. Furthermore, the community will get in touch with Lightning nodes and possibly maintain a routing node. What strengthens BTC will help Stacks as well.
+```bash
+echo 'Setting up Application';
+pm2 start ecosystem.config.cjs;
+pm2 save;
+pm2 startup;
+```
+
+## Configuration
+
+Configuration of the project is done through the config.js file. A template for the file is set up within config.template.js. Create a copy of that file, rename it to config.js and fill it with your data.
+
+- passphrase
+  - This string is used internally for authentication token encryption. If you suspect that the string has been leaked, change it. This will invalidate any active authentication tokens.
+- adminEmail
+  - The user with this email address will always be considered an admin for the application. Admin users can promote others to admins, but admin privileges can never be taken away from the user with the adminEmail
+- email
+  - These settings are used for sending confirmation and password reset emails. Code for the usage can be found within the Email.js file. Depending on the email provider, different settings may have to be used. Information on the password used can be found here: https://support.google.com/accounts/answer/185833?hl=en. Information on service options can be found here: https://nodemailer.com/smtp/well-known/.
+- lnChannelAddress
+  - This is the lightning channel address users will be directed to create a channel to.
+- lnNodeKey
+  - This is the public key of the lightning network node. It is used to retrieve active channel data.
+- stxDelegationAddress
+  - This is the address that users will be delegating their STX to.
+- poolAddress
+  - This is the POX address the pool is going to use.
+- poolPrivateKey
+  - This is the private key for the given POX pool address.
+- environment
+  - This should be "development" or "production" to change between the STX test net and the main net.
+- domain
+  - This is the domain the website will be hosted on. This mainly affects email links.
+
+## Miscellaneous Commands
+
+```bash
+# Restarting services
+pm2 restart all
+```
+
+```bash
+# Checking on services
+pm2 status
+```
+
+```bash
+# Checking service logs
+pm2 logs
+```
+
+```bash
+# Renewing SSL certificates
+pm2 stop all;
+sudo iptables -t nat -F;
+sudo /sbin/iptables-save;
+sudo certbot certonly --standalone --domains lnstacking.com;
+sudo cp /etc/letsencrypt/live/lnstacking.com/privkey.pem ./privkey.pem
+sudo cp /etc/letsencrypt/live/lnstacking.com/fullchain.pem ./fullchain.pem
+sudo chmod 777 ./privkey.pem ./fullchain.pem
+sudo iptables -t nat -F;
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3000;
+sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 4000;
+sudo /sbin/iptables-save;
+pm2 restart all;
+```
