@@ -1,6 +1,6 @@
 ## LNSTACKING M1 (User and Admin Dashboard)
 
-![screenshot_dashboard](lnstacking_dashboard.png)
+![screenshot_dashboard](lnstacking-dashboard.png)
 
 
 ## Installation
