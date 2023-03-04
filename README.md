@@ -1,3 +1,8 @@
+## LNSTACKING M1 (User and Admin Dashboard)
+
+![screenshot_dashboard](screenshot_dashboard.png)
+
+
 ## Installation
 
 ```bash
