@@ -4,7 +4,7 @@ export let language = 'en';
 
 const translations = {
 	en: {
-		lnstackingDescription: `lnstacking is a cryptocurrency stacking platform that utilizes the Lightning Network for fast and efficient payouts. Stacking, or staking, refers to the process of holding and locking up a certain amount of a cryptocurrency in order to participate in network validation or governance and receive rewards in return.`,
+		lnstackingDescription: `LNSTACKING is a Stacking platform that utilizes the Lightning Network for fast and efficient payouts. When you stack your STX, you will earn bitcoin that miners transfer as part of Proof of Transfer, Stacks' unique consensus mechanism.`,
 		textDescription: 'Text Description',
 		loading: 'Loading',
 		logout: 'Logout',
