@@ -1,0 +1,161 @@
+# Translation of Plugins - Spectra &#8211; WordPress Gutenberg Blocks - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Spectra &#8211; WordPress Gutenberg Blocks - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-13 08:34:17+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Spectra &#8211; WordPress Gutenberg Blocks - Stable (latest release)\n"
+
+#: includes/blocks/table-of-contents/block.php:16 dist/blocks-placeholder.js:30
+#: dist/blocks.js:17
+msgid "Table of Contents"
+msgstr "Inhaltsverzeichnis"
+
+#: classes/class-uagb-init-blocks.php:773
+msgid "You have not added any Gravity Forms yet."
+msgstr "Du hast noch kein Gravity Forms Formular hinzugefügt."
+
+#: classes/class-uagb-admin.php:219
+msgid "Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?"
+msgstr "Teile doch deine Erfahrungen und gib uns eine 5-Sterne-Bewertung im WordPress-Pluginverzeichnis?"
+
+#: classes/class-uagb-init-blocks.php:426
+msgid "Please select a valid Gravity Form."
+msgstr "Bitte wähle ein gültiges Gravity Forms Formular aus."
+
+#: includes/blocks/marketing-button/block.php:16 dist/blocks-placeholder.js:23
+#: dist/blocks.js:13
+msgid "Marketing Button"
+msgstr "Marketing-Button"
+
+#: classes/class-uagb-init-blocks.php:468
+msgid "Please select a valid Contact Form 7."
+msgstr "Bitte wähle ein gültiges Contact Form 7 Formular aus."
+
+#: classes/class-uagb-init-blocks.php:740
+msgid "You have not added any Contact Form 7 yet."
+msgstr "Du hast noch kein Contact Form 7 Formular hinzugefügt."
+
+#: classes/class-uagb-init-blocks.php:726
+#: classes/class-uagb-init-blocks.php:759 dist/blocks.js:17
+msgid "Select Form"
+msgstr "Formular auswählen"
+
+#: classes/class-uagb-helper.php:411 dist/blocks.js:13 dist/blocks.js:17
+msgid "Full"
+msgstr "Blocksatz"
+
+#: includes/blocks/blockquote/block.php:16 dist/blocks-placeholder.js:10
+#: dist/blocks.js:13
+msgid "Blockquote"
+msgstr "Blockzitat"
+
+#: includes/blocks/restaurant-menu/block.php:16 dist/blocks-placeholder.js:26
+#: dist/blocks.js:17
+msgid "Price List"
+msgstr "Preisliste"
+
+#: includes/blocks/column/block.php:14 dist/blocks.js:11 dist/blocks.js:17
+msgid "Column"
+msgstr "Spalte"
+
+#: includes/blocks/columns/block.php:16 dist/blocks.js:17
+msgid "Advanced Columns"
+msgstr "Erweiterte Spalten"
+
+#: classes/class-uagb-admin.php:224
+msgid "I already did"
+msgstr "Habe ich schon erledigt"
+
+#: classes/class-uagb-admin.php:223
+msgid "Nope, maybe later"
+msgstr "Vielleicht später"
+
+#: classes/class-uagb-admin.php:221
+msgid "Ok, you deserve it"
+msgstr "Ok, ihr habt es verdient"
+
+#: includes/blocks/call-to-action/block.php:16 dist/blocks-placeholder.js:12
+#: dist/blocks.js:13
+msgid "Call To Action"
+msgstr "Aufruf zum Handeln"
+
+#: includes/blocks/post-masonry/block.php:16 dist/blocks.js:17
+msgid "Post Masonry"
+msgstr "Beiträge Masonry"
+
+#: includes/blocks/post-carousel/block.php:16 dist/blocks-placeholder.js:24
+#: dist/blocks.js:17
+msgid "Post Carousel"
+msgstr "Beiträge-Karussell"
+
+#: includes/blocks/post-timeline/block.php:16 dist/blocks-placeholder.js:36
+#: dist/blocks.js:17
+msgid "Post Timeline"
+msgstr "Beiträge-Zeitleiste"
+
+#: blocks-config/post-timeline/class-uagb-post-timeline.php:859
+msgid "No posts found"
+msgstr "Keine Beiträge gefunden"
+
+#: includes/blocks/icon-list/attributes.php:19
+msgid "Label #1"
+msgstr "Beschriftung #1"
+
+#: includes/blocks/icon-list/block.php:16 dist/blocks-placeholder.js:18
+#: dist/blocks.js:13
+msgid "Icon List"
+msgstr "Icon-Liste"
+
+#: includes/blocks/team/block.php:16 dist/blocks-placeholder.js:33
+#: dist/blocks.js:17
+msgid "Team"
+msgstr "Team"
+
+#: includes/blocks/social-share/block.php:16 dist/blocks-placeholder.js:28
+#: dist/blocks.js:17
+msgid "Social Share"
+msgstr "Soziale Medien teilen"
+
+#: includes/blocks/content-timeline/block.php:16 dist/blocks-placeholder.js:35
+#: dist/blocks.js:13
+msgid "Content Timeline"
+msgstr "Inhalt Zeitachse"
+
+#: includes/blocks/post-grid/block.php:16 dist/blocks-placeholder.js:25
+#: dist/blocks.js:17
+msgid "Post Grid"
+msgstr "Beiträge-Raster"
+
+#: blocks-config/post-timeline/class-uagb-post-timeline.php:523
+#: blocks-config/post/class-uagb-post.php:528
+#: blocks-config/post/class-uagb-post.php:1995
+#: includes/blocks/post-carousel/attributes.php:113
+#: includes/blocks/post-grid/attributes.php:105
+#: includes/blocks/post-masonry/attributes.php:108 dist/blocks.js:1
+#: dist/blocks.js:13 dist/blocks.js:17
+msgid "Read More"
+msgstr "Weiterlesen"
+
+#: includes/blocks/info-box/block.php:16 dist/blocks-placeholder.js:20
+#: dist/blocks.js:13
+msgid "Info Box"
+msgstr "Info-Box"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.brainstormforce.com"
+msgstr "https://www.brainstormforce.com"
+
+#. Author of the plugin
+msgid "Brainstorm Force"
+msgstr "Brainstorm Force"
+
+#: classes/class-uagb-loader.php:343
+msgid "Install Gutenberg"
+msgstr "Gutenberg installieren"

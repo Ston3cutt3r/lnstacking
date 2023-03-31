@@ -1,7 +1,6 @@
-## LNSTACKING M1 (User and Admin Dashboard)
+## LNSTACKING (User and Admin Dashboard)
 
-![screenshot_dashboard](lnstacking-dashboard.png)
-
+![screenshot_dashboard](screenshot_dashboard.png)
 
 ## Installation
 
@@ -81,30 +80,16 @@ Configuration of the project is done through the config.js file. A template for 
 ```bash
 # Restarting services
 pm2 restart all
-```
 
-```bash
 # Checking on services
 pm2 status
-```
 
-```bash
 # Checking service logs
 pm2 logs
-```
 
-```bash
 # Renewing SSL certificates
-pm2 stop all;
-sudo iptables -t nat -F;
-sudo /sbin/iptables-save;
 sudo certbot certonly --standalone --domains lnstacking.com;
 sudo cp /etc/letsencrypt/live/lnstacking.com/privkey.pem ./privkey.pem
 sudo cp /etc/letsencrypt/live/lnstacking.com/fullchain.pem ./fullchain.pem
 sudo chmod 777 ./privkey.pem ./fullchain.pem
-sudo iptables -t nat -F;
-sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3000;
-sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 4000;
-sudo /sbin/iptables-save;
-pm2 restart all;
 ```
